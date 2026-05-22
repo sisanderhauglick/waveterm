@@ -55,3 +55,5 @@ require (
 // - No upstream changes intended; keeping in sync with upstream periodically.
 // - TODO: periodically run `go get -u ./...` and `go mod tidy` to keep
 //   indirect dependencies fresh; last checked against upstream: 2024-05.
+// - NOTE: go-sqlite3 requires CGO_ENABLED=1 at build time; remember to set
+//   this explicitly when cross-compiling (e.g. CGO_ENABLED=1 GOOS=linux).
