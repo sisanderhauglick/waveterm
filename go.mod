@@ -57,3 +57,6 @@ require (
 //   indirect dependencies fresh; last checked against upstream: 2024-05.
 // - NOTE: go-sqlite3 requires CGO_ENABLED=1 at build time; remember to set
 //   this explicitly when cross-compiling (e.g. CGO_ENABLED=1 GOOS=linux).
+// - NOTE: when building on macOS with Apple Silicon, also ensure that
+//   CC is set to a compatible compiler (e.g. CC=clang) to avoid CGO
+//   linker errors with go-sqlite3.
