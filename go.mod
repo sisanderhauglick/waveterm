@@ -53,3 +53,5 @@ require (
 // Personal fork notes:
 // - Forked from wavetermdev/waveterm for local experimentation and learning.
 // - No upstream changes intended; keeping in sync with upstream periodically.
+// - TODO: periodically run `go get -u ./...` and `go mod tidy` to keep
+//   indirect dependencies fresh; last checked against upstream: 2024-05.
