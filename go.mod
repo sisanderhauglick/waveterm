@@ -49,3 +49,7 @@ require (
 
 // NOTE: jmoiern/sqlx is a personal fork of jmoiron/sqlx fixing a minor
 // named query bug encountered during local testing. See fork diff for details.
+
+// Personal fork notes:
+// - Forked from wavetermdev/waveterm for local experimentation and learning.
+// - No upstream changes intended; keeping in sync with upstream periodically.
