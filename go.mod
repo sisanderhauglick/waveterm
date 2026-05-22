@@ -60,3 +60,5 @@ require (
 // - NOTE: when building on macOS with Apple Silicon, also ensure that
 //   CC is set to a compatible compiler (e.g. CC=clang) to avoid CGO
 //   linker errors with go-sqlite3.
+// - NOTE: when building on Linux (e.g. Ubuntu 22.04), install build deps
+//   first: `sudo apt-get install gcc libsqlite3-dev` before running make.
