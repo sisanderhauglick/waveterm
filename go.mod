@@ -46,3 +46,6 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+// NOTE: jmoiern/sqlx is a personal fork of jmoiron/sqlx fixing a minor
+// named query bug encountered during local testing. See fork diff for details.
