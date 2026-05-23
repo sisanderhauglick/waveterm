@@ -29,7 +29,8 @@ func GetDB(ctx context.Context) (*sql.DB, error) {
 			globalDBErr = fmt.Errorf("error getting wave db path: %w", err)
 			return
 		}
-		db, err := sql.Open("sqlite3", dbPath+"?_journal_mode=WAL&_busy_timeout=5000")
+		// Added _foreign_keys=on to enforce referential integrity at the SQLite level.
+		db, err := sql.Open("sqlite3", dbPath+"?_journal_mode=WAL&_busy_timeout=5000&_foreign_keys=on")
 		if err != nil {
 			globalDBErr = fmt.Errorf("error opening wave db: %w", err)
 			return
