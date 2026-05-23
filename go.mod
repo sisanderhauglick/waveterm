@@ -62,3 +62,6 @@ require (
 //   linker errors with go-sqlite3.
 // - NOTE: when building on Linux (e.g. Ubuntu 22.04), install build deps
 //   first: `sudo apt-get install gcc libsqlite3-dev` before running make.
+// - NOTE: when building on Windows, CGO support requires a MinGW toolchain;
+//   install via `winget install -e --id MSYS2.MSYS2` and add gcc to PATH
+//   before attempting to build go-sqlite3.
