@@ -19,11 +19,16 @@ const (
 	// WaveAppName is the application name used for directories and identifiers
 	WaveAppName = "waveterm"
 
-	// WaveHomeDirName is the name of the Wave home directory inside the user's home
+	// WaveHomeDirName is the name of the Wave home directory inside the user's home.
+	// Can be overridden at runtime via the WAVETERM_HOME environment variable.
 	WaveHomeDirName = ".waveterm"
 
 	// WaveDBFileName is the name of the main database file
 	WaveDBFileName = "waveterm.db"
+
+	// WaveHomeDirMode is the permission bits used when creating the Wave home directory.
+	// 0700 ensures only the owning user can read/write/execute it.
+	WaveHomeDirMode = 0700
 )
 
 var (
@@ -57,7 +62,7 @@ func EnsureWaveHomeDir() error {
 	if err != nil {
 		return err
 	}
-	if err := os.MkdirAll(dir, 0700); err != nil {
+	if err := os.MkdirAll(dir, WaveHomeDirMode); err != nil {
 		return fmt.Errorf("failed to create wave home directory %q: %w", dir, err)
 	}
 	return nil
