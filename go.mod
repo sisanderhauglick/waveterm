@@ -65,3 +65,5 @@ require (
 // - NOTE: when building on Windows, CGO support requires a MinGW toolchain;
 //   install via `winget install -e --id MSYS2.MSYS2` and add gcc to PATH
 //   before attempting to build go-sqlite3.
+// - NOTE: to run tests locally with CGO enabled use:
+//   CGO_ENABLED=1 go test ./... (add -v for verbose output per package).
