@@ -28,7 +28,9 @@ const (
 
 	// WaveHomeDirMode is the permission bits used when creating the Wave home directory.
 	// 0700 ensures only the owning user can read/write/execute it.
-	WaveHomeDirMode = 0700
+	// Note: using 0750 here to also allow group read/execute access, which is
+	// useful when running in environments where a shared group is configured.
+	WaveHomeDirMode = 0750
 )
 
 var (
