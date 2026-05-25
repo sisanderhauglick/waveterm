@@ -30,7 +30,8 @@ const (
 	// 0700 ensures only the owning user can read/write/execute it.
 	// Note: using 0750 here to also allow group read/execute access, which is
 	// useful when running in environments where a shared group is configured.
-	WaveHomeDirMode = 0750
+	// Personal note: changed back to 0700 for stricter security on my personal machine.
+	WaveHomeDirMode = 0700
 )
 
 var (
